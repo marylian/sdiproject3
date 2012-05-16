@@ -32,7 +32,14 @@ var procedureFunct={
         }
         mileService=20000;
         return (mileService); //When the condition is not met, number is returned.
+},
+
+	stringFunc: function(string1, string2){ //String function.
+    var i=string1.concat(string2); // String concatenation & var i is a local variable.
+    j=i;
+    return (j);    //String is returned back.
 }
+
 
 
 
@@ -48,6 +55,12 @@ procedureFunct.boolFunc("Hyundai", 40);
 
 
 procedureFunct.numberFunc(0);
+
+
+procedureFunct.stringFunc("I would really like to buy", " a 370z, but its going to burn a hole in my pocket");
+console.log(j);
+
+
 
 
 
