@@ -38,10 +38,20 @@ var procedureFunct={
     var i=string1.concat(string2); // String concatenation & var i is a local variable.
     j=i;
     return (j);    //String is returned back.
+},
+
+
+	arrayFunc: function(carList, i){ // Array function.
+		var priceSum=0;
+console.log ("Can you tell me the total amount for all these "+carList.length+" cars here");
+    for (var i=0; i<priceList.length; i++){  //Local variable declared & for loop present.
+      priceSum+=priceList[i]; //Math calculation.
+        j=i;
+    }
+    console.log("The total amount that you would pay for all these cars is $" +priceSum); //Output
+    return (carList[j]); //Returned array
+
 }
-
-
-
 
 
 };
@@ -60,7 +70,11 @@ procedureFunct.numberFunc(0);
 procedureFunct.stringFunc("I would really like to buy", " a 370z, but its going to burn a hole in my pocket");
 console.log(j);
 
+var carList=["Z370", "Infinity 37S", "BMW 3 series", "Mercedes CLR"]; //Declaration of array
+var priceList=[50000, 48000, 33000, 60000]; //Declaration of array
 
+procedureFunct.arrayFunc(carList, 2); //Array function with a number and an array as an argument.
+console.log(carList[j]+" will cost you "+priceList[j]);
 
 
 
