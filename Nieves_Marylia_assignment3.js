@@ -38,9 +38,9 @@ var procedureFunct={
     var i=string1.concat(string2); // String concatenation & var i is a local variable.
     j=i;
     return (j);    //String is returned back.
-},
+}
 
-
+/*
 	arrayFunc: function(carList, i){ // Array function.
 		var priceSum=0;
 console.log ("Can you tell me the total amount for all these "+carList.length+" cars here");
@@ -52,7 +52,7 @@ console.log ("Can you tell me the total amount for all these "+carList.length+" 
     return (carList[j]); //Returned array
 
 }
-
+*/
 
 };
 
@@ -70,11 +70,25 @@ procedureFunct.numberFunc(0);
 procedureFunct.stringFunc("I would really like to buy", " a 370z, but its going to burn a hole in my pocket");
 console.log(j);
 
-var carList=["Z370", "Infinity 37S", "BMW 3 series", "Mercedes CLR"]; //Declaration of array
-var priceList=[50000, 48000, 33000, 60000]; //Declaration of array
 
-procedureFunct.arrayFunc(carList, 2); //Array function with a number and an array as an argument.
-console.log(carList[j]+" will cost you "+priceList[j]);
+var jsonData=function(carDealer){
+	console.log("These are luxury cars");
+	for (var i=0; i<=carDealer.carDetails.length; i++){
+		var luxuryCars=carDealer.carDetails[i];
+		console.log("This one is a"+luxuryCars.Manufacturer+", model name "+ luxuryCars.Make+" and it costs " +luxuryCars.Price);
+	}
+}
+
+jsonData(carDealer);
+
+
+//var carList=["Z370", "Infinity 37S", "BMW 3 series", "Mercedes CLR"]; //Declaration of array
+//var priceList=[50000, 48000, 33000, 60000]; //Declaration of array
+
+
+
+//procedureFunct.arrayFunc(carList, 2); //Array function with a number and an array as an argument.
+//console.log(carList[j]+" will cost you "+priceList[j]);
 
 
 
