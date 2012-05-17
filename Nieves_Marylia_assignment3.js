@@ -73,9 +73,9 @@ console.log(j);
 
 var jsonData=function(carDealer){
 	console.log("These are luxury cars");
-	for (var i=0; i<=carDealer.carDetails.length; i++){
+	for (var i=0; i<carDealer.carDetails.length; i++){
 		var luxuryCars=carDealer.carDetails[i];
-		console.log("This one is a"+luxuryCars.Manufacturer+", model name "+ luxuryCars.Make+" and it costs " +luxuryCars.Price);
+		console.log("This one is a"+luxuryCars.Manufacturer+", model name "+ luxuryCars.Model+" and it costs " +luxuryCars.Price);
 	}
 }
 
