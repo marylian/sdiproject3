@@ -38,21 +38,15 @@ var procedureFunct={
     var i=string1.concat(string2); // String concatenation & var i is a local variable.
     j=i;
     return (j);    //String is returned back.
-}
+},
 
-/*
-	arrayFunc: function(carList, i){ // Array function.
-		var priceSum=0;
-console.log ("Can you tell me the total amount for all these "+carList.length+" cars here");
-    for (var i=0; i<priceList.length; i++){  //Local variable declared & for loop present.
-      priceSum+=priceList[i]; //Math calculation.
-        j=i;
-    }
-    console.log("The total amount that you would pay for all these cars is $" +priceSum); //Output
-    return (carList[j]); //Returned array
-
+ 	jsonFunc: function(carDealer){
+	console.log("These are luxury cars");
+	for (var i=0; i<carDealer.carDetails.length; i++){
+		var luxuryCars=carDealer.carDetails[i];
+		console.log("This one is a"+luxuryCars.Manufacturer+", model name "+ luxuryCars.Model+" and it costs " +luxuryCars.Price);
+	}
 }
-*/
 
 };
 
@@ -71,13 +65,7 @@ procedureFunct.stringFunc("I would really like to buy", " a 370z, but its going 
 console.log(j);
 
 
-var jsonData=function(carDealer){
-	console.log("These are luxury cars");
-	for (var i=0; i<carDealer.carDetails.length; i++){
-		var luxuryCars=carDealer.carDetails[i];
-		console.log("This one is a"+luxuryCars.Manufacturer+", model name "+ luxuryCars.Model+" and it costs " +luxuryCars.Price);
-	}
-}
+
 
 jsonData(carDealer);
 
