@@ -4,14 +4,25 @@
 //alert("JavaScript works!");
 
 var procedureFunct={
+	luxuryCars: true,		//Property Boolean
+	sportsCars: ["Infinity", "Jaguar", "Mercedes"],		//Property Array
+    carBudget: 25000,		//Property Number
+    carString: "Nothing is better than a good old Toyota",		//Property String
     
-    procFunc: function(myBudget){ //Procedure without any return.
-        if (myBudget<=25000){ 
-            console.log("This car is too expensive!! I cant afford it"); //Output if condition is met.
-        }
+    procFunc: function(booleanVal){ 		//Procedure without any return.
+        if (booleanVal=true){ 
+        	if(procedureFunct.carBudget<=25000){
+            i=procedureFunct.carString;
+            return(i);		//Return String
+        	}
         else {
-            console.log("This is within my budget but I am not sure about the color"); //Output if condition is not met.
+            console.log("But ofcourse, you are looking to buy a luxury car!!"); //Output if condition is not met.
         }
+    	}
+	},
+	methodAccess: function (){
+		accessArray=procedureFunct.sportsCars.pop();
+		console.log(procedureFunct.sportsCars);
 	},
 
 	boolFunc: function(vehicleMake, gasMileage){	
@@ -53,7 +64,8 @@ var procedureFunct={
 };
 
 
-procedureFunct.procFunc(25001);
+procedureFunct.procFunc(true);
+console.log(i);
 
 procedureFunct.boolFunc("Hyundai", 40);
 
@@ -63,3 +75,4 @@ procedureFunct.stringFunc("I would really like to buy", " a 370z, but its going 
 console.log(j);
 
 procedureFunct.jsonFunc(carDealer);
+procedureFunct.methodAccess();
