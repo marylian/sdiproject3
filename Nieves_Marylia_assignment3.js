@@ -4,12 +4,16 @@
 //alert("JavaScript works!");
 
 var procedureFunct={
+	
 	luxuryCars: true,		//Property Boolean
+	
 	sportsCars: ["Infinity", "Jaguar", "Mercedes"],		//Property Array
-    carBudget: 25000,		//Property Number
-    carString: "Nothing is better than a good old Toyota",		//Property String
+    	
+    	carBudget: 25000,		//Property Number
+   	
+   	carString: "Nothing is better than a good old Toyota",		//Property String
     
-    procFunc: function(booleanVal){ 		//Procedure without any return.
+    	procFunc: function(booleanVal){ 		//Procedure without any return.
         if (booleanVal=true){ 
         	if(procedureFunct.carBudget<=25000){
             i=procedureFunct.carString;
@@ -20,7 +24,8 @@ var procedureFunct={
         }
     	}
 	},
-	methodAccess: function (){
+	
+	methodAccess: function (){		//Method Accessor
 		accessArray=procedureFunct.sportsCars.pop();
 		console.log(procedureFunct.sportsCars);
 	},
@@ -53,7 +58,7 @@ var procedureFunct={
 	return (j);    //String is returned back.
 	},
 
- 	jsonFunc: function(carDealer){
+ 	jsonFunc: function(carDealer){		//JSON data being access from the json.js file.
 	console.log("These are luxury cars");
 	for (var i=0; i<carDealer.carDetails.length; i++){
 		var luxuryCars=carDealer.carDetails[i];
@@ -62,7 +67,6 @@ var procedureFunct={
 }
 
 };
-
 
 procedureFunct.procFunc(true);
 console.log(i);
@@ -74,5 +78,6 @@ procedureFunct.numberFunc(0);
 procedureFunct.stringFunc("I would really like to buy", " a 370z, but its going to burn a hole in my pocket");
 console.log(j);
 
-procedureFunct.jsonFunc(carDealer);
-procedureFunct.methodAccess();
+procedureFunct.jsonFunc(carDealer);	//JSON method being called.
+
+procedureFunct.methodAccess();		//Method mutator being called.
