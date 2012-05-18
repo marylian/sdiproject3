@@ -25,7 +25,7 @@ var procedureFunct={
     	}
 	},
 	
-	methodAccess: function (){		//Method Accessor
+	methodMutate: function (){		//Method Mutator
 		accessArray=procedureFunct.sportsCars.pop();
 		console.log(procedureFunct.sportsCars);
 	},
@@ -80,4 +80,4 @@ console.log(j);
 
 procedureFunct.jsonFunc(carDealer);	//JSON method being called.
 
-procedureFunct.methodAccess();		//Method mutator being called.
+procedureFunct.methodMutate();		//Method mutator being called.
